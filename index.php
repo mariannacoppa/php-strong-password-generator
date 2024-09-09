@@ -9,9 +9,12 @@
     if($_GET['length'] < 6){
       $message = 'Devi inserire un numero maggiore o uguale a 6';
     }
-    // creo la stringa contenente i caratteri utilizzabili per la password
-  $baseString = 'abcdefghijklmnopqrstuvwxyz'.strtoupper('abcdefghijklmnopqrstuvwxyz').'0123456789'.'!?&%$<>^+-*/()[]{}@#_=';
-    var_dump($baseString);
+  // creo la stringa contenente i caratteri utilizzabili per la password
+  $baseString = 'abcdefghijklmnopqrstuvwxyz'.strtoupper('abcdefghijklmnopqrstuvwxyz').'0123456789!?&%$<>^+-*/()[]{}@#_=';
+  // recupero un carattere randomico dalla variabile contentente i caratteri utilizzabili
+  $slices = str_split($baseString);
+  $randomChar = rand(0, count($slices) - 1);
+  var_dump($baseString[$randomChar]);
 }
 ?>
 <!DOCTYPE html>
