@@ -14,3 +14,14 @@ Invece di visualizzare la password nella index, effettuare un redirect ad una pa
 *Milestone 4 (BONUS)*
 Gestire ulteriori parametri per la password: quali caratteri usare fra numeri, lettere e simboli. Possono essere scelti singolarmente (es. solo numeri) oppure possono essere combinati fra loro (es. numeri e simboli, oppure tutti e tre insieme).
 Dare all’utente anche la possibilità di permettere o meno la ripetizione di caratteri uguali.
+
+Pseudocodice
+
+1 creo la struttura statica del form
+2 imposto il campo input in moo che possa accettare solo valoi numerici
+3 creo un array contenente le lettere dell'alfabeto, le cifre da 0 a 9 ed i caratteri speciali
+4 imposto una funzione che attinga dall'array di cui sopra un numero di caratteri corrispondente a quello impostato dall'utente
+5 creo un array vuoto atto a contenere il codice generato dalla funzione
+6 stampo il codice generato (fine milestone 1)
+7 copio i passaggi scritti nel file php nel file functions.php, inserendoli in funzioni
+8 collego il file functions al file index (fine milestone 2)
