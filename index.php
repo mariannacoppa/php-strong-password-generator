@@ -24,8 +24,8 @@
       // appendo il numero alla stringa vuota
       $password .= $baseString[$randomChar];
     }
-    var_dump($password);
-}
+    
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +39,7 @@
     <div class="container mt-5">
       <div class="row">
         <div class="col-12">
-          <div class="form-container bg-dark d-flex justify-content-center">
+          <div class="form-container bg-dark d-flex justify-content-center p-2 rounded-4">
             <form action="./index.php" method="get">
               <div class="row">
                 <div class="col-12 col-md-6">
@@ -50,6 +50,14 @@
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-sm btn-primary text-center mb-5">Crea</button>
+                </div>
+                <div class="col-12 text-center">
+                  <?php if(isset($message)) { ?>
+                    <h2 class="text-danger"><?php echo $message; ?></h2>
+                  <?php } ?>
+                  <?php if(isset($password)) { ?>
+                    <h2 class="text-success"><?php echo $password; ?></h2>
+                  <?php } ?>
                 </div>
               </div>
             </form>
