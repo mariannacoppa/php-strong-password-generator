@@ -8,6 +8,11 @@ if (isset($_GET['length'])) { //&& $_GET['length'] != '') {
   // se il valore è true restituisco la password
   if ($check === true) {
     $password = generateRandomPassword($_GET['length']);
+
+    session_start();
+    $_SESSION['password'] = $password;
+
+    header('Location: success.php');
   }
 }
 
