@@ -40,6 +40,20 @@ if (isset($_GET['length'])) { //&& $_GET['length'] != '') {
                 <!-- se la cifra è < 6, compare avviso -->
                 <input type="number" min="6" name="length" id="length" class="form-control form-control-sm my-4 col-md-6" placeholder="Lunghezza della password">
               </div>
+              <div class="col-12 col-md-6">
+                <div class="duplicates mb-2">
+                  <input type="checkbox" name="duplicates" class="form-check-input" id="duplicates">
+                  <label for="" class="form-check-label text-light me-4">Consenti duplicati</label>
+                </div>
+                <div class="char-options mb-2">
+                <input type="checkbox" name="numbers" class="form-check-input" id="numbers">
+                <label for="" class="form-check-label text-light me-4">Numeri</label>
+                <input type="checkbox" name="symbols" class="form-check-input" id="symbols">
+                  <label for="" class="form-check-label text-light me-4">Caratteri speciali</label>
+                  <input type="checkbox" name="uppercase" class="form-check-input" id="uppercase">
+                  <label for="" class="form-check-label text-light me-4">Maiuscole</label>
+                </div>
+              </div>
               <div class="col-12">
                 <button type="submit" class="btn btn-sm btn-primary text-center mb-5">Crea</button>
               </div>
